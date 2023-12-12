@@ -7,6 +7,7 @@ import { renderExperiences } from './views/experience';
 const navbar = document.getElementById("navbar");
 const toggle = document.getElementById("menu-toggle");
 const navUl = document.createElement("ul");
+const main = document.getElementById("main");
 let navItems = document.querySelectorAll(".nav-item");
 
 const createNavigationItems = (title, href) => {
