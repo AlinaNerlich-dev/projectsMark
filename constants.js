@@ -17,27 +17,27 @@ export const NAVIGATION_LINKS = [
 export const SKILLS = [
     {
         title: "HTML5",
-        logo:"../public/pics/HTML5.png"
+        logo:"../pics/HTML5.png"
     },
     {
         title: "Tailwind CSS",
-        logo:"../public/pics/tailwind.png"
+        logo:"../pics/tailwind.png"
     },
     {
         title: "Javascript",
-        logo:"../public/pics/JS5.png"
+        logo:"../pics/JS5.png"
     },
     {
         title: "React",
-        logo:"../public/pics/react.png"
+        logo:"../pics/react.png"
     },
     {
         title: "Django",
-        logo:"../public/pics/django.png"
+        logo:"../pics/django.png"
     },
     {
         title: "Flutter",
-        logo:"../public/pics/Flutter.png"
+        logo:"../pics/Flutter.png"
     },
 ]
 
@@ -76,34 +76,34 @@ export const PROJECTS =[
         link: "https://lamatherapie-koeln.de/",
         detail: "CMS: statamic",
         info:  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque pariatur nostrum, distinctio blanditiis ipsa repellendus. Obcaecati animi labore officia voluptatibus?",
-        img:"../public/pics/lamatherapie.png"
+        img:"../pics/lamatherapie.png"
     },
     {
         title:"Commissioned work",
         link: "https://lichtwald.eu/",
         detail: "CMS: statamic",
         info:  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque pariatur nostrum, distinctio blanditiis ipsa repellendus. Obcaecati animi labore officia voluptatibus?",
-        img:"../public/pics/lichtwald.png"
+        img:"../pics/lichtwald.png"
     },
     {
         title:"Javascript custom code",
         link: "https://shiftcare.com/go/savings-calculator",
         detail: "Javascript only",
         info:  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque pariatur nostrum, distinctio blanditiis ipsa repellendus. Obcaecati animi labore officia voluptatibus?",
-        img:"../public/pics/javascript_calculator.png"
+        img:"../pics/javascript_calculator.png"
     },
     {
         title:"Frontend Development Assistant",
         link: "https://maiss.de/",
         detail: "CMS: statamic",
         info:  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque pariatur nostrum, distinctio blanditiis ipsa repellendus. Obcaecati animi labore officia voluptatibus?",
-        img:"../public/pics/maiss.png"
+        img:"../pics/maiss.png"
     },
     {
         title:"Color Picker",
         link: "https://strong-cupcake-b23b60.netlify.app/",
         detail: "-",
         info:  "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque pariatur nostrum, distinctio blanditiis ipsa repellendus. Obcaecati animi labore officia voluptatibus?",
-        img:"../public/pics/color_picker.png"
+        img:"../pics/color_picker.png"
     },
 ]
