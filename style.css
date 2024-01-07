@@ -56,6 +56,7 @@ header{
   display:flex;
   align-self: flex-end;
   background-color: transparent;
+
 }
 #navbar > ul {
   padding-top: var(--navbar-height);
@@ -71,7 +72,6 @@ header{
   display: flex;
 }
 #navbar.openMenu{
-  
   border-left: 2px solid var(--greyish);
   padding-left:1rem;
 }
@@ -128,6 +128,7 @@ main{
   #menu-toggle{
     display: none;
   }
+ 
   #navbar ul > li::before {
     font-size: 1.5rem;
   }
@@ -219,7 +220,16 @@ align-items: center;
   font-size: 2rem;
   text-decoration: none;
 }
-
+.skill{
+  padding: 1rem;
+  border-bottom: 1px solid transparent;
+  border-top:1px solid transparent;
+}
+.skill:hover{
+  padding: 1rem;
+  border-bottom: 1px solid var(--rose);
+  border-top:1px solid var(--rose);
+}
 /* Desktop */
 @media screen and (min-width: 500px) {
   #skills, #experiences, #cv{

@@ -38,11 +38,15 @@ function handleMenuToggle(){
     navbar.classList.toggle("openMenu")
 }
 
+function handleMobillNav(){
+    navUl.classList.remove("openMenu");
+    navbar.classList.remove("openMenu")
+}
+
 toggle.addEventListener('click', handleMenuToggle);
 
 
 //Change URL
-
 
 function handleChangeURL(event){
     event.preventDefault();
@@ -54,11 +58,13 @@ function handleChangeURL(event){
             break
         case "/experience":
             main.innerHTML = renderExperiences();  
+            
             break  
         case "/projects":
             main.innerHTML = renderProjects();    
             break
     }
+    handleMobillNav();
 }
 
 navigationCreation();
