@@ -9,7 +9,7 @@ export function renderHome(){
         </div>
         <img id="picAlina" src="../pics/Alina_Nerlich.jpg" alt="Alina Nerlich Profil">
         <div id="socialMedia">
-            <a target="_blank" href="https://github.com/AlinaNerlich-dev/"><img class="socialMedia" src="../pics/GitHUb.png" alt="GitHub Logo" width="30" height="30"></a>
+            <a target="_blank" href="https://github.com/AlinaNerlich-dev/"><img class="socialMedia" src="../pics/GitHub.png" alt="GitHub Logo" width="30" height="30"></a>
             <a href="https://www.linkedin.com/in/alina-nerlich/"><img class="socialMedia" src="../pics/linkedin.png" alt="GitHub Logo" target="_blank" width="30" height="30"></a>
             <a href="https://www.xing.com/"><img class="socialMedia" src="../pics/xing-logo.png" alt="GitHub Logo" target="_blank" width="30" height="30"></a>
         </div>

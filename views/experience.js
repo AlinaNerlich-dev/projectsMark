@@ -40,11 +40,19 @@ export function renderExperiences( ){
 return `
         <h2 id="skills">Skills</h2>
             ${skills}
-            </div>
+            </div> 
         
         <h2 id="experiences">Experiences</h2>
             ${experiences}
             </div>
+    
+        <h2 id="cv">Download CV</h2>
+        <div id="downloadWrapper">
+        <div> 
+            <a id="mailIcon" href="../assets/cv_AlinaNerlich.pdf" download="cv">🙍🏼‍♀️ 📩</a>
+            </div> 
+        </div>
+
         `
 ;
 

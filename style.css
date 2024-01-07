@@ -55,6 +55,7 @@ header{
 #menu-toggle{
   display:flex;
   align-self: flex-end;
+  background-color: transparent;
 }
 #navbar > ul {
   padding-top: var(--navbar-height);
@@ -193,10 +194,10 @@ main{
 
 /* Experience Page */
 /* Mobil */
-#skills, #experiences{
+#skills, #experiences, #cv{
   font-size: 2rem;
 }
-#experiences{
+#experiences, #cv{
   margin-top:5rem;
 }
 #skillWrapper{
@@ -208,15 +209,20 @@ justify-content: center;
 align-items: center;
 
 }
-#experiences, #skills{
+#experiences, #skills, #downloadWrapper{
   margin-bottom: 1rem;
 }
-.experience{
+.experience, .cv{
   margin: 1.5rem 1rem ;
 }
+#mailIcon{
+  font-size: 2rem;
+  text-decoration: none;
+}
+
 /* Desktop */
 @media screen and (min-width: 500px) {
-  #skills, #experiences{
+  #skills, #experiences, #cv{
     font-size: 3rem;
   }
 }

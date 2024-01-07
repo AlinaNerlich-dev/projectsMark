@@ -29,7 +29,7 @@ export const SKILLS = [
     },
     {
         title: "React",
-        logo:"../pics/react.png"
+        logo:"../pics/React.png"
     },
     {
         title: "Django",
