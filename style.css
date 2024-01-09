@@ -195,6 +195,21 @@ main{
 
 /* Experience Page */
 /* Mobil */
+#search{
+  border: none;
+  border-radius: 10px;;
+  padding: .5rem;
+}
+#search:focus{
+  outline: none !important;
+  border:1px solid var(--rose);
+}
+.searchHint{
+  padding: 1rem;
+  border-bottom: 1px solid var(--rose);
+  border-top:1px solid var(--rose);
+}
+
 #skills, #experiences, #cv{
   font-size: 2rem;
 }
@@ -225,11 +240,7 @@ align-items: center;
   border-bottom: 1px solid transparent;
   border-top:1px solid transparent;
 }
-.skill:hover{
-  padding: 1rem;
-  border-bottom: 1px solid var(--rose);
-  border-top:1px solid var(--rose);
-}
+
 /* Desktop */
 @media screen and (min-width: 500px) {
   #skills, #experiences, #cv{

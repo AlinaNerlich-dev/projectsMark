@@ -4,6 +4,7 @@ import { renderHome } from './views/home';
 import { renderProjects } from './views/projects';
 import { renderExperiences } from './views/experience';
 
+
 const navbar = document.getElementById("navbar");
 const toggle = document.getElementById("menu-toggle");
 const navUl = document.createElement("ul");
@@ -37,13 +38,21 @@ function handleMenuToggle(){
     navUl.classList.toggle("openMenu");
     navbar.classList.toggle("openMenu")
 }
-
 function handleMobillNav(){
     navUl.classList.remove("openMenu");
     navbar.classList.remove("openMenu")
 }
 
 toggle.addEventListener('click', handleMenuToggle);
+
+
+
+const filterskills = () =>  {
+    const input = document.getElementById("search");
+    // const value = input.value;
+    // const skills = document.querySelectorAll("skill")
+    console.log(input)
+}
 
 
 //Change URL
@@ -57,8 +66,8 @@ function handleChangeURL(event){
             main.innerHTML = renderHome();
             break
         case "/experience":
-            main.innerHTML = renderExperiences();  
-            
+            main.innerHTML = renderExperiences(filterskills);  
+            ;
             break  
         case "/projects":
             main.innerHTML = renderProjects();    

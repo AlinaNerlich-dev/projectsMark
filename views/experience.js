@@ -1,6 +1,5 @@
 import { EXPERIENCES, SKILLS } from "../constants"
 
-
 const generateSkills = (title, logo) => {
     return`
         <div class="skill">
@@ -18,13 +17,19 @@ const generateExperiences = (duration, agency, job_title) => {
         </div>
     `
 }
+
+// Filter Skills
+
+
 //prevents double insertion of content
 let isVisible;
 
 let skills = `<div id="skillWrapper">`
 let experiences = `<div id="experienceWrapper">`
+let search = document.getElementById("search")
   
-export function renderExperiences( ){
+export function renderExperiences(filterskills){
+    
     if( !isVisible){
         for(const skill of SKILLS){
             skills += generateSkills(skill.title, skill.logo);
@@ -36,11 +41,15 @@ export function renderExperiences( ){
     }
 
     isVisible = true;
-    
+
 return `
         <h2 id="skills">Skills</h2>
+        
+        <label for="search">Search skills</label>
+        <input type="text" id="search" name="search" onkeyup="filterskills()" placeholder="search skill"><br>
             ${skills}
-            </div> 
+   
+        </div> 
         
         <h2 id="experiences">Experiences</h2>
             ${experiences}
@@ -53,7 +62,6 @@ return `
             </div> 
         </div>
 
-        `
-;
-
+        `;
 }
+
