@@ -47,12 +47,7 @@ toggle.addEventListener('click', handleMenuToggle);
 
 
 
-const filterskills = () =>  {
-    const input = document.getElementById("search");
-    // const value = input.value;
-    // const skills = document.querySelectorAll("skill")
-    console.log(input)
-}
+
 
 
 //Change URL
@@ -66,7 +61,7 @@ function handleChangeURL(event){
             main.innerHTML = renderHome();
             break
         case "/experience":
-            main.innerHTML = renderExperiences(filterskills);  
+            main.innerHTML = renderExperiences();  
             ;
             break  
         case "/projects":

@@ -19,17 +19,21 @@ const generateExperiences = (duration, agency, job_title) => {
 }
 
 // Filter Skills
-
+async function filterskills() {
+    const input =  document.getElementById("search");
+    const value = await input.value;
+    const skills = document.querySelectorAll("skill")
+console.log(skills)
+    
+}
 
 //prevents double insertion of content
 let isVisible;
-
 let skills = `<div id="skillWrapper">`
 let experiences = `<div id="experienceWrapper">`
 let search = document.getElementById("search")
   
-export function renderExperiences(filterskills){
-    
+export function renderExperiences(filter){
     if( !isVisible){
         for(const skill of SKILLS){
             skills += generateSkills(skill.title, skill.logo);
