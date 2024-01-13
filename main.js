@@ -5,6 +5,7 @@ import { renderProjects } from './views/projects';
 import { renderExperiences } from './views/experience';
 
 
+
 const navbar = document.getElementById("navbar");
 const toggle = document.getElementById("menu-toggle");
 const navUl = document.createElement("ul");
