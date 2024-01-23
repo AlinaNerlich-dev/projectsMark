@@ -23,9 +23,10 @@ let projectWrapper = document.getElementById("projectWrapper");
 
 export function renderProjects(){
     if (!isVisible){
-        for (const project of PROJECTS){
-            projectsContainer.innerHTML += generateProject(project.img, project.title, project.link, project.detail, project.info);
-        }
+        PROJECTS.forEach((project) => {
+            const projectTemplate = generateProject(project.img, project.title, project.link, project.detail, project.info);
+            projectWrapper.innerHTML += projectTemplate;
+        })
     }
 
     isVisible = true;
