@@ -2,26 +2,29 @@ import { PROJECTS } from "../constants";
 
 const generateProject = (img, title, link, detail, info) => {
     return `
-        <div class="projectWrapper">
+        <div class="projectContainer">
             <div>
-            <h2 class="project_title">${title}</h2>
-            <a class="project_link" href="${link}" target="_blank" role="button"><img class="project_pic" src="${img}" alt="${title}" width="300px"/></a>
-            <p class="extra">${detail}</p>
-            
+                <h2 class="project_title">${title}</h2>
+                <a class="project_link" href="${link}" target="_blank" role="button"><img class="project_pic" src="${img}" alt="${title}" width="300px"/></a>
+                <p class="extra">${detail}</p>
             </div>
             <div class="info"><p>${info}</p></div>
-        </div>
+        
+    </div>
         `
 }
 
 
 let isVisible;
-let projectWrapper = `<div id="projectsWrapper">`
+const projectsContainer = document.createElement("div");
+projectsContainer.setAttribute('id', 'projectWrapper')
+let projectWrapper = document.getElementById("projectWrapper");
+
 
 export function renderProjects(){
     if (!isVisible){
         for (const project of PROJECTS){
-            projectWrapper += generateProject(project.img, project.title, project.link, project.detail, project.info);
+            projectsContainer.innerHTML += generateProject(project.img, project.title, project.link, project.detail, project.info);
         }
     }
 
@@ -29,6 +32,7 @@ export function renderProjects(){
 
     return `<div>
                  <h1 id="projects">Projects</h1>
-                 ${projectWrapper}
+                ${projectWrapper}
             </div>`
 }
+

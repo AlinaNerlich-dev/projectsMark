@@ -55,6 +55,7 @@ toggle.addEventListener('click', handleMenuToggle);
 
 function handleChangeURL(event){
     event.preventDefault();
+    console.log(event)
     const linkHref = event.target.attributes.href.nodeValue; 
     
     switch(linkHref){
