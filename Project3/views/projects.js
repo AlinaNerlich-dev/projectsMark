@@ -1,5 +1,8 @@
 import { PROJECTS } from "../constants";
-const main = document.getElementById("main");
+
+let generateProjectWrapper = document.createElement("div");
+generateProjectWrapper.setAttribute('id', 'projectWrapper');
+
 
 const generateProject = (img, title, link, detail, info) => {
     return `
@@ -15,28 +18,26 @@ const generateProject = (img, title, link, detail, info) => {
         `
 }
 
+const setupProjects = () => {
+    PROJECTS.forEach((project) =>{
+        const template = generateProject(project.img, project.title, project.link, project.detail, project.info)
+        generateProjectWrapper.innerHTML += template;
+    })  
+}
+
 
 let isVisible;
-let projectsContainer = document.createElement("div");
-projectsContainer.setAttribute('id', 'projectWrapper');
-projectsContainer.innerHTML = "";
-
 export function renderProjects(){
     
     if (!isVisible){
-        PROJECTS.forEach((project) => {
-            const projectTemplate = generateProject(project.img, project.title, project.link, project.detail, project.info);
-            projectsContainer.innerHTML += projectTemplate;
-            });
-        console.log(projectsContainer)
-
+        setupProjects()
     }
 
     isVisible = true;
 
     return `<div>
                  <h1 id="projects">Projects</h1>
-                ${projectsContainer.outerHTML}
+                ${generateProjectWrapper.outerHTML}
             </div>`
 }
 

@@ -35,6 +35,7 @@ body{
 }
 h1{
   font-size: 2.5rem;
+ 
 }
 @media screen and (min-width: 500px){
   h1{
@@ -97,7 +98,7 @@ button {
   background-color: var(--white);
 }
 main{
-  margin-top: 8rem;
+  margin-top: 4rem;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -181,7 +182,7 @@ main{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap:3rem;
+    gap:2rem;
   }
   #picAlina{
     width: 50%;
@@ -199,6 +200,7 @@ main{
   border: none;
   border-radius: 10px;;
   padding: .5rem;
+  border:1px solid transparent;
 }
 #search:focus{
   outline: none !important;
@@ -210,11 +212,11 @@ main{
   border-top:1px solid var(--rose);
 }
 
-#skills, #experiences, #cv{
+#experiences, #cv{
   font-size: 2rem;
 }
 #experiences, #cv{
-  margin-top:5rem;
+  margin-top:8rem;
 }
 #skillsWrapper{
 display: flex;
@@ -226,10 +228,14 @@ align-items: center;
 
 }
 #experiences, #skills, #downloadWrapper{
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+#searchWrapper{
+  width: fit-content;
+  margin: 0 auto;
 }
 .experience, .cv{
-  margin: 1.5rem 1rem ;
+  margin: 1.5rem 0rem ;
 }
 #mailIcon{
   font-size: 2rem;
@@ -243,7 +249,7 @@ align-items: center;
 
 /* Desktop */
 @media screen and (min-width: 500px) {
-  #skills, #experiences, #cv{
+  #experiences, #cv{
     font-size: 3rem;
   }
 }
@@ -255,10 +261,10 @@ align-items: center;
 .project_title{
   font-size: 1.2rem;;
 }
-#projectsWrapper{
+#projectWrapper{
   margin-top: 2rem;
 }
-.projectWrapper{
+.projectContainer{
   margin-bottom: 3rem;
   display:flex;
   flex-direction: column;
@@ -276,7 +282,7 @@ align-items: center;
   .project_pic{
     width: 600px;
   }
-  .projectWrapper{
+  .projectContainer{
     flex-direction: row;
     align-items: center;
   }
