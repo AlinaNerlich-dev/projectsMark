@@ -18,22 +18,20 @@ const createNavigationItems = (title, href) => {
            <a href="${href}">${title}</a>
        </li>`
    };
+
+
 const navigationCreation = () => {
-    
     NAVIGATION_LINKS.forEach ((item) => {
         const navigationTemplate = createNavigationItems(item.title, item.href);
         navUl.innerHTML += navigationTemplate;
-
-        
     });
-    navbar.append(navUl);
+    navbar.appendChild(navUl);
     navItems = document.querySelectorAll(".nav-item");
     navItems.forEach((link) => {
     link.addEventListener("click", handleChangeURL);
-
 })
-
 };
+
 
 function handleMenuToggle(){
     navUl.classList.toggle("openMenu");
@@ -45,9 +43,6 @@ function handleMobillNav(){
 }
 
 toggle.addEventListener('click', handleMenuToggle);
-
-
-
 
 
 
@@ -63,8 +58,7 @@ function handleChangeURL(event){
             main.innerHTML = renderHome();
             break
         case "/experience":
-            main.innerHTML = renderExperiences();  
-            ;
+            main.innerHTML += renderExperiences();  
             break  
         case "/projects":
             main.innerHTML = renderProjects();    

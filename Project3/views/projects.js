@@ -16,24 +16,25 @@ const generateProject = (img, title, link, detail, info) => {
 
 
 let isVisible;
-const projectsContainer = document.createElement("div");
-projectsContainer.setAttribute('id', 'projectWrapper')
-let projectWrapper = document.getElementById("projectWrapper");
-
+let projectsContainer = document.createElement("div");
+projectsContainer.setAttribute('id', 'projectWrapper');
+projectsContainer.innerHTML = "";
 
 export function renderProjects(){
+    
     if (!isVisible){
         PROJECTS.forEach((project) => {
             const projectTemplate = generateProject(project.img, project.title, project.link, project.detail, project.info);
-            projectWrapper.innerHTML += projectTemplate;
-        })
+            projectsContainer.innerHTML += projectTemplate;
+        });
+
     }
 
     isVisible = true;
 
     return `<div>
                  <h1 id="projects">Projects</h1>
-                ${projectWrapper}
+                ${projectsContainer}
             </div>`
 }
 
