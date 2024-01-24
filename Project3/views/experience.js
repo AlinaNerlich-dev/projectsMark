@@ -43,6 +43,21 @@ const setupExperiences = () => {
 }
 
 
+//Filter
+
+
+export function filterSkills() {
+    const filter = document.getElementById("search").value.toLowerCase();
+    let array = SKILLS.map((skill) => skill.title)
+    const result = array.filter((skill) => skill.toLowerCase().includes(filter.toLowerCase(),0));
+    
+console.log(result)
+
+
+  }
+
+
+
 let isVisible;
 export function renderExperiences(){    
     if( !isVisible){
@@ -52,11 +67,12 @@ export function renderExperiences(){
 
     isVisible = true;
 
+
 return `<div>
             <h1 id="skills">Experiences & Skills</h1>
             <div id="searchWrapper">
                 <label for="search">Search skills</label>
-                <input type="text" id="search" name="search" onkeyup="filterskills()" placeholder="search skill"><br>
+                <input type="text" id="search" name="search" placeholder="search skill"><br>
             </div>
                 ${generateSkillsWrapper.outerHTML}
 
@@ -71,3 +87,4 @@ return `<div>
         </div>
         `;
 }
+

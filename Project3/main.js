@@ -3,7 +3,7 @@ import { NAVIGATION_LINKS } from './constants';
 import { renderHome } from './views/home';
 import { renderProjects } from './views/projects';
 import { renderExperiences } from './views/experience';
-
+import { filterSkills} from './views/experience';
 
 
 const navbar = document.getElementById("navbar");
@@ -44,6 +44,7 @@ function handleMobillNav(){
 
 toggle.addEventListener('click', handleMenuToggle);
 
+// Filter
 
 
 //Change URL
@@ -58,7 +59,9 @@ function handleChangeURL(event){
             main.innerHTML = renderHome();
             break
         case "/experience":
-            main.innerHTML = renderExperiences();  
+            main.innerHTML = renderExperiences();
+            let search = document.getElementById("search");
+            search.addEventListener("input", filterSkills()); 
             break  
         case "/projects":
             main.innerHTML = renderProjects();    
