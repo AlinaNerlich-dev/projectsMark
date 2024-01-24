@@ -216,7 +216,7 @@ main{
 #experiences, #cv{
   margin-top:5rem;
 }
-#skillWrapper{
+#skillsWrapper{
 display: flex;
 flex-direction: row;
 gap: 1rem;

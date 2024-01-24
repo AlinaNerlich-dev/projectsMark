@@ -36,7 +36,7 @@ export function renderProjects(){
 
     return `<div>
                  <h1 id="projects">Projects</h1>
-                ${projectsContainer}
+                ${projectsContainer.outerHTML}
             </div>`
 }
 

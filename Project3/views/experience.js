@@ -9,26 +9,20 @@ const generateSkill = (title, logo) => {
         `
 }
 
-const generateSkillsWrapper = () =>{
-return `
-    <div id="skillsWrapper"></div>
-`
-}
-
-let skillsWrapper = document.getElementById("skillsWrapper");
+let generateSkillsWrapper = document.createElement("div");
+generateSkillsWrapper.setAttribute('id', 'skillsWrapper');
+generateSkillsWrapper.innerHTML = "";
 
 const setupSkills = () => {
 
     SKILLS.forEach((skill) =>{
         const template = generateSkill(skill.title, skill.logo)
-        skillsWrapper.innerHTML += template;
-    })
-
+        generateSkillsWrapper.innerHTML += template;
+    })  
+    return generateSkillsWrapper.outerHTML;
 }
 
-export function renderExperiences(){
-    generateSkillsWrapper();
-    
+export function renderExperiences(){    
 
 return `
         <h2 id="skills">Skills</h2>
