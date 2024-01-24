@@ -58,7 +58,7 @@ function handleChangeURL(event){
             main.innerHTML = renderHome();
             break
         case "/experience":
-            main.innerHTML += renderExperiences();  
+            main.innerHTML = renderExperiences();  
             break  
         case "/projects":
             main.innerHTML = renderProjects();    

@@ -26,6 +26,8 @@ export function renderProjects(){
         PROJECTS.forEach((project) => {
             const projectTemplate = generateProject(project.img, project.title, project.link, project.detail, project.info);
             projectsContainer.innerHTML += projectTemplate;
+            console.log(projectsContainer)
+            console.log(projectTemplate)
         });
 
     }

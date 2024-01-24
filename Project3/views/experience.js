@@ -1,5 +1,6 @@
 import { EXPERIENCES, SKILLS } from "../constants"
 
+
 const generateSkill = (title, logo) => {
     return`
         <div class="skill">
@@ -8,7 +9,7 @@ const generateSkill = (title, logo) => {
         `
 }
 
-const generateSkillsWrapper = () => {
+const generateSkillsWrapper = () =>{
 return `
     <div id="skillsWrapper"></div>
 `
@@ -16,17 +17,18 @@ return `
 
 let skillsWrapper = document.getElementById("skillsWrapper");
 
-
 const setupSkills = () => {
+
     SKILLS.forEach((skill) =>{
         const template = generateSkill(skill.title, skill.logo)
-        skillsWrapper += template;
+        skillsWrapper.innerHTML += template;
     })
 
 }
 
 export function renderExperiences(){
     generateSkillsWrapper();
+    
 
 return `
         <h2 id="skills">Skills</h2>
