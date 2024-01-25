@@ -4,6 +4,6 @@
 
 # 1. FILTER FUNCTION
 
-# How could I have written the function using filter()? I was able to console log the correct data, but I dont know how to modif now the according CSS with this
+# How could I have written the function using filter()? I was able to console log the correct data, but I dont know how to modif now the according CSS with this. I kept it in line 55 incl. a console.log()
 
 # Thank you

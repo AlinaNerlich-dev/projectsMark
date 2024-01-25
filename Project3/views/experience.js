@@ -52,21 +52,18 @@ export function filterSkills() {
     const input = document.getElementById("search")
     const filter = input.value.toLowerCase();
     let array = SKILLS.map((skill) => skill.title) // li
-    const results = array.filter((skill) => skill.toLowerCase().includes(filter.toLowerCase(),0))
+    // const results = array.filter((skill) => skill.toLowerCase().includes(filter.toLowerCase(),0));
+    // console.log(results)
 
         for(let i = 0; i< array.length; i++){
             let skillName = array[i];
             if (skillName.toLowerCase().indexOf(filter)> -1 && input.value != "" ){
-                console.log(skillBoxes[i])
                 skillBoxes[i].classList.add("searchHint");
             } else{
                 skillBoxes[i].classList.remove("searchHint");
             }
         }    
 }
-
-
-
 
 let isVisible;
 export function renderExperiences(){    
