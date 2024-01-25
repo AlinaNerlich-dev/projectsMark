@@ -1,7 +1,9 @@
 import { PROJECTS } from "../constants";
 
-let generateProjectWrapper = document.createElement("div");
-generateProjectWrapper.setAttribute('id', 'projectWrapper');
+const generateProjectWrapper = ()=>{
+    return `
+    <div id="projectWrapper"></div>`
+}
 
 
 const generateProject = (img, title, link, detail, info) => {
@@ -19,25 +21,30 @@ const generateProject = (img, title, link, detail, info) => {
 }
 
 const setupProjects = () => {
+    generateProjectWrapper();
+    let projectWrapper = document.getElementById("projectWrapper");
+
     PROJECTS.forEach((project) =>{
         const template = generateProject(project.img, project.title, project.link, project.detail, project.info)
-        generateProjectWrapper.innerHTML += template;
+        projectWrapper += template;
     })  
+    return projectWrapper;
 }
 
 
 let isVisible;
+let projectWrapper;
 export function renderProjects(){
     
     if (!isVisible){
-        setupProjects()
+        projectWrapper = setupProjects()
     }
 
     isVisible = true;
 
     return `<div>
                  <h1 id="projects">Projects</h1>
-                ${generateProjectWrapper.outerHTML}
+                ${projectWrapper}
             </div>`
 }
 
