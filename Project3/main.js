@@ -61,7 +61,7 @@ function handleChangeURL(event){
         case "/experience":
             main.innerHTML = renderExperiences();
             let search = document.getElementById("search");
-            search.addEventListener("input", filterSkills()); 
+            search.addEventListener("input", filterSkills); 
             break  
         case "/projects":
             main.innerHTML = renderProjects();    

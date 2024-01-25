@@ -206,10 +206,14 @@ main{
   outline: none !important;
   border:1px solid var(--rose);
 }
-.searchHint{
+.skill{
   padding: 1rem;
-  border-bottom: 1px solid var(--rose);
-  border-top:1px solid var(--rose);
+  border-bottom: 1px solid transparent;
+  border-top:1px solid transparent;
+}
+
+.searchHint{
+  border: 1px solid var(--rose);
 }
 
 #experiences, #cv{
@@ -233,6 +237,7 @@ align-items: center;
 #searchWrapper{
   width: fit-content;
   margin: 0 auto;
+  margin-bottom: 1rem;
 }
 .experience, .cv{
   margin: 1.5rem 0rem ;
@@ -241,11 +246,7 @@ align-items: center;
   font-size: 2rem;
   text-decoration: none;
 }
-.skill{
-  padding: 1rem;
-  border-bottom: 1px solid transparent;
-  border-top:1px solid transparent;
-}
+
 
 /* Desktop */
 @media screen and (min-width: 500px) {

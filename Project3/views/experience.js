@@ -46,15 +46,25 @@ const setupExperiences = () => {
 //Filter
 
 
+
 export function filterSkills() {
-    const filter = document.getElementById("search").value.toLowerCase();
-    let array = SKILLS.map((skill) => skill.title)
-    const result = array.filter((skill) => skill.toLowerCase().includes(filter.toLowerCase(),0));
-    
-console.log(result)
+    const skillBoxes = document.getElementsByClassName("skill"); 
+    const input = document.getElementById("search")
+    const filter = input.value.toLowerCase();
+    let array = SKILLS.map((skill) => skill.title) // li
+    const results = array.filter((skill) => skill.toLowerCase().includes(filter.toLowerCase(),0))
 
+        for(let i = 0; i< array.length; i++){
+            let skillName = array[i];
+            if (skillName.toLowerCase().indexOf(filter)> -1 && input.value != "" ){
+                console.log(skillBoxes[i])
+                skillBoxes[i].classList.add("searchHint");
+            } else{
+                skillBoxes[i].classList.remove("searchHint");
+            }
+        }    
+}
 
-  }
 
 
 
