@@ -4,6 +4,7 @@ import { createHeaderTemplate } from './views/header';
 import { createSkillsTemplate, setupSkills } from './views/skills';
 import { createExperiencesTemplate, setupExperiences } from './views/experience';
 import { createProjectsTemplate, setupProjects } from './views/projects';
+import { filterSkills } from './views/skills';
 
 // NAVIGATION
 const navbar = document.getElementById("navbar");
@@ -24,16 +25,7 @@ const navigationCreation = () => {
         navUl.innerHTML += navigationTemplate;
     });
     navbar.append(navUl);
-    navItems = document.querySelectorAll(".nav-item");
-    navItems.forEach((link) => {
-    link.addEventListener("click", scrollToSection);
-
-})
 };
-
-const scrollToSection = () =>{
-
-}
 
 function handleMenuToggle(){
     navUl.classList.toggle("openMenu");
@@ -59,7 +51,10 @@ header.innerHTML += createHeaderTemplate();
 //Create Skills
 const skills = document.getElementById("skills");
 skills.innerHTML += createSkillsTemplate();
-setupSkills()
+setupSkills();
+const filter = document.getElementById("search");
+filter.addEventListener("input", filterSkills)
+console.log(filterSkills)
 
 //Create Experiences
 const experiences = document.getElementById("experiences");
