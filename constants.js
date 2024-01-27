@@ -1,15 +1,19 @@
 export const NAVIGATION_LINKS = [
     {
     title: "Home",
-    href: "/home",
+    href: "home",
+    }, 
+    {
+    title: "Skills",
+    href: "skills",
     }, 
     {
     title: "Experiences",
-    href: "/experience",
+    href: "experiences",
     }, 
     {
     title: "Projects",
-    href: "/projects",
+    href: "projects",
 
     }, 
 ]

@@ -25,17 +25,31 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+html {
+  scroll-behavior: smooth;
+}
 body{
   max-width: 1920px;
-  margin-left: auto;
-  margin-right: auto;
   min-height: 100vh;
   background-color: var(--beige);
-
 }
 h1{
   font-size: 2.5rem;
 }
+h2{
+  font-size: 2.5rem;
+  margin-top: 5rem;
+}
+h3{
+  font-size: 1.5rem;
+}
+h4{
+  font-size: 1rem;
+}
+p, label{
+  font-size: 1.2rem;
+}
+
 @media screen and (min-width: 500px){
   h1{
     font-size: 4rem;
@@ -100,7 +114,8 @@ main{
   margin-top: 8rem;
   display:flex;
   justify-content: center;
-  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
   flex-direction: column;
   padding: 0 1.5rem;
 }
@@ -180,8 +195,7 @@ main{
   #gridWrapper{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap:3rem;
+
   }
   #picAlina{
     width: 50%;
@@ -210,7 +224,7 @@ main{
   border-top:1px solid var(--rose);
 }
 
-#skills, #experiences, #cv{
+#skills, #experiences{
   font-size: 2rem;
 }
 #experiences, #cv{
@@ -224,9 +238,6 @@ flex-wrap: wrap;
 justify-content: center;
 align-items: center;
 
-}
-#experiences, #skills, #downloadWrapper{
-  margin-bottom: 1rem;
 }
 .experience, .cv{
   margin: 1.5rem 1rem ;
@@ -243,7 +254,7 @@ align-items: center;
 
 /* Desktop */
 @media screen and (min-width: 500px) {
-  #skills, #experiences, #cv{
+  #skills, #experiences{
     font-size: 3rem;
   }
 }
@@ -255,11 +266,7 @@ align-items: center;
 .project_title{
   font-size: 1.2rem;;
 }
-#projectsWrapper{
-  margin-top: 2rem;
-}
 .projectWrapper{
-  margin-bottom: 3rem;
   display:flex;
   flex-direction: column;
   gap:1rem;
@@ -273,14 +280,19 @@ align-items: center;
 }
 /* Desktop */
 @media screen and (min-width: 800px) {
+  #projects {
+    margin-bottom: 1rem;
+  }
   .project_pic{
     width: 600px;
   }
   .projectWrapper{
     flex-direction: row;
     align-items: center;
+    margin-top: 2rem;
   }
   .project_title{
-    font-size: 2rem;;
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
 }

@@ -1,42 +1,39 @@
-import { EXPERIENCES, SKILLS } from "../constants"
+import { EXPERIENCES } from "../constants"
 
 
-const generateSkill = (title, logo) => {
+const generateExperience = (duration, agency, job_title) => {
     return`
-        <div class="skill">
-            <img src="${logo}" alt="${title}" width="80" height="auto">
+        <div class="experience">
+            <h3>${job_title}</h3>
+            <h4>${agency}</h4>
+            <p>${duration}<p>
         </div>
-        `
+    `
 }
 
-const generateSkillsWrapper = () =>{
-return `
-    <div id="skillsWrapper"></div>
-`
+export const setupExperiences = () => {
+    const experiencesWrapper = document.getElementById("experiencesWrapper")
+    EXPERIENCES.forEach((experience) =>{
+        const template = generateExperience(experience.duration, experience.agency, experience.job_title)
+        experiencesWrapper.innerHTML += template;
+    })  
+    return experiencesWrapper;
 }
 
-let skillsWrapper = document.getElementById("skillsWrapper");
-
-const setupSkills = () => {
-
-    SKILLS.forEach((skill) =>{
-        const template = generateSkill(skill.title, skill.logo)
-        skillsWrapper.innerHTML += template;
-    })
-
-}
-
-export function renderExperiences(){
-    generateSkillsWrapper();
-    
+export function createExperiencesTemplate(){  
 
 return `
-        <h2 id="skills">Skills</h2>
-        <label for="search">Search skills</label>
-        <input type="text" id="search" name="search" onkeyup="filterskills()" placeholder="search skill"><br>
-            ${setupSkills()}
-
-
-
+        <div>
+            <h2>Experiences</h2>
+            <div id="experiencesWrapper">
+            </div>
+            <h3 id="cv">Download CV</h3>
+            <div id="downloadWrapper">
+            <div> 
+                <a id="mailIcon" href="../assets/cv_AlinaNerlich.pdf" download="cv">🙍🏼‍♀️ 📩</a>
+            </div> 
+        </div>
         `;
 }
+
+
