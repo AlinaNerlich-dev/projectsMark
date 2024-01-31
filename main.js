@@ -54,7 +54,7 @@ skills.innerHTML += createSkillsTemplate();
 setupSkills();
 const filter = document.getElementById("search");
 filter.addEventListener("input", filterSkills)
-console.log(filterSkills)
+
 
 //Create Experiences
 const experiences = document.getElementById("experiences");

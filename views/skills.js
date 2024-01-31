@@ -33,11 +33,11 @@ export const createSkillsTemplate = () => {
 
 //Filter
 export function filterSkills() {
-    console.log('hLLO')
+
     const skillBoxes = document.getElementsByClassName("skill"); 
     const input = document.getElementById("search")
     const filter = input.value.toLowerCase();
-    let array = SKILLS.map((skill) => skill.title) // li
+    let array = SKILLS.map((skill) => skill.title) 
 
         for(let i = 0; i< array.length; i++){
             let skillName = array[i];
