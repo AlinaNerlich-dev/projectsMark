@@ -34,4 +34,4 @@ let heroes = [
 export const getHeroes = () => heroes;
 export const getHero = (id) => heroes.find((hero) => hero.id == id)
 export const deleteHero = (id) => heroes.filter((hero) => hero.id !== id)
-export const addHero = (id, name, age, alias) => heroes.push(...heroes, {id:id ,name:name, age:age, alias:alias})
+export const addHero = (id, name, age, alias) => heroes.push(...heroes, {id:id, name:name, age:age, alias:alias})

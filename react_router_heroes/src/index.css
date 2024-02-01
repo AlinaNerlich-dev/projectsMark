@@ -35,9 +35,12 @@ h4{
 p{
   margin: .6rem;
 }
-h4 > button {
+button {
   font-size: 1.5rem;
   padding:1rem;
   bordeR: 1px solid red;
   border-radius: 12px;
+}
+input{
+  margin: 1rem .5rem;
 }
