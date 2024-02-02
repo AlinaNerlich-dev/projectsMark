@@ -1,0 +1,46 @@
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+li{
+  list-style: none;
+  margin: 4rem 0;
+}
+ul > a{
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  color: cornflowerblue;
+}
+h1,h2{
+  margin: 2rem;
+}
+h4{
+  margin: 1rem;
+}
+p{
+  margin: .6rem;
+}
+button {
+  font-size: 1.5rem;
+  padding:1rem;
+  bordeR: 1px solid red;
+  border-radius: 12px;
+}
+input{
+  margin: 1rem .5rem;
+}

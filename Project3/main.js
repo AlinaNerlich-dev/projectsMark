@@ -1,0 +1,76 @@
+import './style.css';
+import { NAVIGATION_LINKS } from './constants';
+import { renderHome } from './views/home';
+import { renderProjects } from './views/projects';
+import { renderExperiences } from './views/experience';
+import { filterSkills} from './views/experience';
+
+
+const navbar = document.getElementById("navbar");
+const toggle = document.getElementById("menu-toggle");
+const navUl = document.createElement("ul");
+const main = document.getElementById("main");
+let navItems = document.querySelectorAll(".nav-item");
+
+const createNavigationItems = (title, href) => {
+    return `
+       <li class="nav-item">
+           <a href="${href}">${title}</a>
+       </li>`
+   };
+
+
+const navigationCreation = () => {
+    NAVIGATION_LINKS.forEach ((item) => {
+        const navigationTemplate = createNavigationItems(item.title, item.href);
+        navUl.innerHTML += navigationTemplate;
+    });
+    navbar.appendChild(navUl);
+    navItems = document.querySelectorAll(".nav-item");
+    navItems.forEach((link) => {
+    link.addEventListener("click", handleChangeURL);
+})
+};
+
+
+function handleMenuToggle(){
+    navUl.classList.toggle("openMenu");
+    navbar.classList.toggle("openMenu")
+}
+function handleMobillNav(){
+    navUl.classList.remove("openMenu");
+    navbar.classList.remove("openMenu")
+}
+
+toggle.addEventListener('click', handleMenuToggle);
+
+// Filter
+
+
+//Change URL
+
+function handleChangeURL(event){
+    event.preventDefault();
+    console.log(event)
+    const linkHref = event.target.attributes.href.nodeValue; 
+    
+    switch(linkHref){
+        case "/home":
+            main.innerHTML = renderHome();
+            break
+        case "/experience":
+            main.innerHTML = renderExperiences();
+            let search = document.getElementById("search");
+            search.addEventListener("input", filterSkills); 
+            break  
+        case "/projects":
+            main.innerHTML = renderProjects();    
+            break
+    }
+    handleMobillNav();
+}
+
+navigationCreation();
+window.onload = main.innerHTML = renderHome();
+
+
