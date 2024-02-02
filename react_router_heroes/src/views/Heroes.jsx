@@ -1,5 +1,6 @@
 import { getHeroes } from "../DATA/heroes"
 import { useNavigate } from "react-router-dom";
+import HeroTemplate from "../components/HeroTemplate";
 
 const Heroes = () =>{
     const heroes = getHeroes();
@@ -11,11 +12,7 @@ const Heroes = () =>{
         <button onClick={() => {navigate("/heroes/add")}}>Add Hero</button>
         <ul>
             {heroes.map((hero) =>(
-                <li key={hero.id}>
-                    <h4><button onClick={()=>{navigate(`/heroes/hero/${hero.id}`)}}>{hero.name}</button></h4>
-                    <p>{hero.age}</p>
-                    <p>{hero.alias}</p>
-                </li>
+               <HeroTemplate key={hero.id} hero={hero} navigate={navigate}/> // Would you implement navigate as a prop or is it better to import it within the HeroTemplate?
             ))}
         </ul>
         </>

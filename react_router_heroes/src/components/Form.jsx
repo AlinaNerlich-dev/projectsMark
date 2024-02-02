@@ -33,10 +33,18 @@ const Form = () =>{
             {formState.errors.heroName ? (<p>{formState.errors.heroName.message}</p>) : null}
             <br/>
             <label htmlFor="heroAlias">Hero Alias</label>
-            <input type="text" placeholder="Clark Kent" {...register("heroAlias")} onChange={(event) => setHeroAlias(event.target.value)}/>
+            <input type="text" placeholder="Clark Kent" {...register("heroAlias", {required:{
+                value: true,
+                message:"You must provide a superhero alias to continue"
+            }})} onChange={(event) => setHeroAlias(event.target.value)}/>
+            {formState.errors.heroAlias ? (<p>{formState.errors.heroAlias.message}</p>) : null}
             <br/>
             <label htmlFor="heroAge">Hero Age</label>
-            <input type="number"  placeholder="43" {...register("heroAge")} onChange={(event) => setHeroAge(event.target.value)}/>
+            <input type="number"  placeholder="43" {...register("heroAge", {required:{
+                value: true,
+                message:"You must provide a superhero age to continue"
+            }})} onChange={(event) => setHeroAge(event.target.value)}/>
+            {formState.errors.heroAge ? (<p>{formState.errors.heroAge.message}</p>) : null}
             <br />
             <button type="submit" disabled={!formState.isDirty}>Submit</button> {/* // Question: Why is the disabled not working? */}
             
