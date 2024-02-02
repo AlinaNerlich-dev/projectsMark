@@ -12,8 +12,8 @@
 
 #### **Dame question** Comig back to question 4: I meant within the project view is still a mistake, when I do it like yu show in the video. I get a 'null' before the projects are rendered and I think it is becuse of my generateProjectWrapper Function?
 
-## react-router-dom
+## react_router_heroes
 
-### 5. ALl my Questions are wihin the Form.jsx. and Hero.jsx.
+### 5. Tiny questions are within the Form.jsx. and Hero.jsx.
 
 # Thank you so much
