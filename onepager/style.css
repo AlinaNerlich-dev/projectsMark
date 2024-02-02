@@ -32,6 +32,8 @@ body{
   max-width: 1920px;
   min-height: 100vh;
   background-color: var(--beige);
+  margin-left:auto;
+  margin-right:auto;
 }
 h1{
   font-size: 2.5rem;
@@ -198,7 +200,7 @@ main{
 
   }
   #picAlina{
-    width: 50%;
+    width: 100%;
     height: auto;
     border-radius: 50%;
     grid-row:1/3;
@@ -206,7 +208,11 @@ main{
     justify-self: left;
   }
 }
-
+@media screen and (min-width: 1200px){
+  #picAlina{
+    width: 60%;
+  }
+}
 /* Experience Page */
 /* Mobil */
 
